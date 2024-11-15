@@ -59,9 +59,6 @@ with open(file_to_load) as financial_data:
 average_net_change = sum(net_change_list) / len(net_change_list)
 
 # Generate the output summary
-
-
-# Print the output
 print ("Financial Analysis")
 print ("----------------------------------------")
 print (f"Toal Months: {total_months}")
@@ -69,6 +66,9 @@ print (f"Total: ${total_net}")
 print (f"Average Change: ${average_net_change:.2f}")
 print(F"Greatest Increase in Profits: {greatest_increase_month} (${greatest_increase_profit})")
 print(F"Greatest Decrease in Profits: {greatest_decrease_month} (${greatest_decrease_losses})")
+
+# Print the output
+print(file_to_output)
 
 # Write the results to a text file
 with open(file_to_output, "w") as txt_file:
