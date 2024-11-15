@@ -72,5 +72,10 @@ print(file_to_output)
 
 # Write the results to a text file
 with open(file_to_output, "w") as txt_file:
-    txt_file.write
-
+    txt_file.write("Financial Analysis\n")
+    txt_file.write("----------------------------------------\n")
+    txt_file.write(f"Total Months: {total_months}\n")
+    txt_file.write(f"Total: ${total_net}\n")
+    txt_file.write(f"Average Change: ${average_net_change:.2f}\n")
+    txt_file.write(f"Greatest Increase in Profits: {greatest_increase_month} (${greatest_increase_profit})\n")
+    txt_file.write(f"Greatest Decrease in Profits: {greatest_decrease_month} (${greatest_decrease_losses})\n")
